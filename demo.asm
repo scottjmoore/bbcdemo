@@ -1,13 +1,13 @@
 start
     org $2000
 
-    ldx #$7f
-    ldy #$08
+    ldx #$3f
+    ldy #$04
 inline
     dec $3000,x
     dex
     bpl inline
-    ldx #$7f
+    ldx #$3f
     lda inline+1
     adc #$80
     sta inline+1
